@@ -3,13 +3,76 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 nav {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 40px;
-    background: rgb(189, 100, 100);
+    background: rgb(52,51,66);
+    background: linear-gradient(90deg, rgba(52,51,66,1) 0%, rgba(8,8,11,1) 41%, rgba(12,92,108,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
 }
+.nav-left {
+    margin: 0 0 0 1rem;
+    cursor: pointer;
+    color: white;
+    font-size:20px;
+    letter-spacing: 1.4px;
+    font-weight: 200;
+    font-family: 'Kaushan Script', cursive;
+}
+ul {
+    display: flex;
+}
+li {
+    margin-right: 3rem;
+    list-style: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+
+
+.humberger {
+    display: none;
+    flex-direction: column;
+    width: 20px;
+    height: 35px;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+}
+.first,.second,.therd{
+    width: 100%;
+    height: 3px;
+    color: rgb(255, 255, 255);
+    background-color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .container1 {
@@ -19,9 +82,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .text1 {
-    /* background-color: rgba(0, 255, 255, 0.322); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,25 +111,6 @@ nav {
     width: 100%;
     height: 961px;
 }
-/* */ 
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
 .container2 {
     background-image: url('./image/pexels-rost.jpg');
     background-position: center center;
@@ -88,7 +130,6 @@ nav {
     height: 910px;
     z-index: 1;
 }
-
 .projects {
     justify-content: center;
     display: grid;
@@ -115,22 +156,6 @@ nav {
     transform: translate(-50%,-0%);
     z-index: 2;
 }
-
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-
 .container3 {
     background-image: url('./image/728101.png');
     background-position: center center;
@@ -169,12 +194,109 @@ nav {
 }
 .pt {
     color: white;
+    width: 80%;
+    height: 40px;
+    min-width: 300px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
-
-
-
-
-
+.wid {
+    width:100px;
+}
+.ptlt {
+    border: 1px solid white;
+    width: 80%; 
+    justify-content: center;
+    border-radius:2px;
+    padding: 2px 0
+}
+.ptlt p {
+    margin: 0 102%
+}
+.container4 {
+    background-image: url('./image/cccc.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 910px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.back4 {
+    width: 100%;
+    height: 910px;
+    background-color: rgba(0, 0, 0, 0.616);
+    position: absolute;
+    z-index: 0;
+}
+.about {
+    position: absolute;
+    margin-top:1rem;
+    font-size: 3rem;
+    border: 1px solid white;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 5px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-0%);
+    z-index: 3;
+}
+.about-text {
+    max-width: 450px;
+    min-width: 300px;
+    width: 80%;
+    margin: 8rem 0 0 0;
+    background-color:rgb(255, 255, 255);
+    z-index: 1;
+    padding: 0.5rem 1.3rem;
+    border-radius: 5px;
+}
+.firstp, .secondp {
+    margin: 1rem 0 0 0;
+    color: black;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    font-size: 15px
+}
+form {
+    background-color: aqua;
+    z-index: 2;
+    max-width: 450px;
+    min-width: 300px;
+    width: 80%;
+    margin: 2rem 0 0 0;
+    background-color:rgb(255, 255, 255);
+    z-index: 1;
+    padding: 0.5rem 1.3rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    margin: 0.6rem 0 0 0;
+    width: 80%;
+    padding: 0.5rem 0.5rem;
+    text-transform: capitalize;
+    border: 1px solid black;
+}
+textarea {
+    margin: 0.6rem 0 0 0;
+    width: 80%;
+    padding: 0.5rem 0.5rem;
+    text-transform: capitalize;
+    border: 1px solid black;
+    resize: none;
+}
+.textc {
+    width: 80%;
+    height: 150px;
+}
 @media only screen and (max-width: 1400px) {
     .text1 {
         left: 60px;
@@ -203,5 +325,19 @@ nav {
   @media only screen and (max-width: 600px) {
       .container1 {
           background-position: -800px;
+      }
+      .nav-right {
+          display: none;
+      }
+      .humberger {
+          display: flex;
+      }
+  }
+  @media only screen and (max-width: 400px) {
+      .about-text {
+          margin-top: 7rem;
+      }
+      form {
+        margin-top: 1rem;
       }
   }
