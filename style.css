@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 nav {
     position: fixed;
@@ -25,21 +24,15 @@ nav {
     font-weight: 200;
     font-family: 'Kaushan Script', cursive;
 }
-ul {
+nav ul {
     display: flex;
 }
-li {
+nav ul li {
     margin-right: 3rem;
     list-style: none;
     cursor: pointer;
     color: white;
 }
-
-
-
-
-
-
 .humberger {
     display: none;
     flex-direction: column;
@@ -54,33 +47,13 @@ li {
     color: rgb(255, 255, 255);
     background-color:#fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container1 {
     background-image: url("./image/big.jpg");
     height: 961px;
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 .text1 {
     display: flex;
@@ -91,6 +64,9 @@ li {
     top: 250px;
     width: 500px;
     height: 400px;
+}
+.page1-text span{
+    color: rgb(189, 6, 6);
 }
 .page1-p{
     color: rgb(240, 240, 240);
@@ -103,7 +79,7 @@ li {
 }
 .page1-text {
     color:#fff;
-    font-size:2rem
+    font-size:2rem;
 }
 .back {
     position: absolute;
@@ -122,6 +98,7 @@ li {
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .back2 {
     position: absolute;
@@ -142,6 +119,10 @@ li {
     border-radius: 5px;
     z-index: 2;
     margin-top: 7rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-color: rgb(141, 40, 40) green;
+    scrollbar-width: thin;
 }
 .product {
     position: absolute;
@@ -156,6 +137,12 @@ li {
     transform: translate(-50%,-0%);
     z-index: 2;
 }
+.container2 .projects a img {
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+    border-radius: 5px;
+}
 .container3 {
     background-image: url('./image/728101.png');
     background-position: center center;
@@ -166,6 +153,8 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 .back3 {
     width: 100%;
@@ -205,14 +194,19 @@ li {
     width:100px;
 }
 .ptlt {
+    position: relative;
     border: 1px solid white;
     width: 80%; 
     justify-content: center;
     border-radius:2px;
-    padding: 2px 0
+    padding: 2px 0;
+    overflow: visible;
 }
 .ptlt p {
-    margin: 0 102%
+    margin: 0 0 0 105%;
+    overflow: visible;
+    z-index: 3;
+    background-color: white
 }
 .container4 {
     background-image: url('./image/cccc.jpg');
@@ -225,6 +219,7 @@ li {
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .back4 {
     width: 100%;
@@ -297,6 +292,104 @@ textarea {
     width: 80%;
     height: 150px;
 }
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    display: flex;
+    height: 250px;
+    background: rgb(52,51,66);
+    background: linear-gradient(90deg, rgba(52,51,66,1) 0%, rgba(8,8,11,1) 41%, rgba(12,92,108,1) 100%);
+    padding: 3rem;
+    align-items: center;
+    position: relative;
+}
+.icons-right {
+    /* position: absolute;
+    bottom: 10px; */
+    display: grid;
+    grid-template-columns: repeat(2, 40px);
+    grid-template-rows:  1fr 1fr;
+    gap: 25px;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-left {
+    width: 50%;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 40px;
+    cursor: pointer;
+}
+.li {
+    /* margin-right: 3rem; */
+    list-style: none;
+    cursor: pointer;
+    color: white;
+}
+.footer-name{
+    cursor: pointer;
+    color: white;
+    font-size:20px;
+    letter-spacing: 1.4px;
+    font-weight: 200;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+.bbb  {
+    position: relative;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+.bbb.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+.reveal{
+    position: relative;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 1.5s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1400px) {
     .text1 {
         left: 60px;
@@ -308,8 +401,9 @@ textarea {
     }
     .text1 {
         left: 20px;
-        width: 280px;
+        width: 300px;
         line-height:50px;
+        flex-wrap: nowrap;
     }
     .page1-h1{
         font-size:2rem;
@@ -318,7 +412,7 @@ textarea {
         font-size:1rem;
     }
     .page1-text{
-        font-size:1.3rem;
+        font-size:1.2rem;
     }
   }
 
@@ -333,6 +427,17 @@ textarea {
           display: flex;
       }
   }
+  @media only screen and (max-width: 425px) {
+    .ptlt {
+        width: 50%;
+    }
+    .wid {
+        width:20px;
+    }
+    .footer-left{
+        align-items: start;
+    }
+  }
   @media only screen and (max-width: 400px) {
       .about-text {
           margin-top: 7rem;
@@ -341,3 +446,9 @@ textarea {
         margin-top: 1rem;
       }
   }
+
+
+
+
+
+
