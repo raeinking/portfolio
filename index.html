@@ -14,20 +14,27 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <div class="mobile-menu">
+        <img class="close" src="./image/cancel.png" alt="" srcset="">
+        <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#project"><li>Project</li></a>
+            <a href="#skill"><li>Skills</li></a> 
+            <a href="#about"><li>About</li></a>
+        </ul>
+    </div>
     <nav>
-        <div class="nav-left">Ramo</div>
+        <div class="nav-left"><a href="#" class="nav-left">Ramo</a></div>
         <div class="nav-right">
             <ul>
-                <li>Home</li>
-                <li>Project</li>
-                <li>Skills</li> 
-                <li>About</li>
+                <a href="#"><li>Home</li></a>
+                <a href="#project"><li>Project</li></a>
+                <a href="#skill"><li>Skills</li></a> 
+                <a href="#about"><li>About</li></a>
             </ul>
         </div>
         <div class="humberger">
-            <div class="first"></div>
-            <div class="second"></div>
-            <div class="therd"></div>
+            <img src="./image/menu (1).png" alt="" srcset="">
         </div>
     </nav>
     <div class="container1">
@@ -40,7 +47,7 @@
             </div> 
         </div> 
     </div>
-    <div class="container2">
+    <div id="project" class="container2">
         <div class="back2"></div>
         <p class="product">Project</p>
         <div class="projects reveal">
@@ -61,61 +68,61 @@
             <a class="hhh " href="https://microverc-third-project.vercel.app/" target="blank"><img src="./image/login.JPG" alt=""></a>
         </div>
     </div>
-    <div class="container3">
+    <div id="skill" class="container3">
         <div class="back3"></div>
         <p class="skil">Skills</p>
         <div class="skills">
             <div class="pt reveal">
                 <p class="wid">HTML</p>
-                <div class="ptlt"><p>95%</p></div>
+                <div class="ptlt html"><p>95%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">CSS</p>
-                <div class="ptlt"><p>75%</p></div>
+                <div class="ptlt css"><p>75%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">JavaScript</p>
-                <div class="ptlt"><p>75%</p></div>
+                <div class="ptlt js"><p>75%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">React</p>
-                <div class="ptlt"><p>70%</p></div>
+                <div class="ptlt rect"><p>70%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">jQuery</p>
-                <div class="ptlt"><p>65%</p></div>
+                <div class="ptlt jq"><p>65%</p></div>
             </div>
             <div class="pt reveal">
-                <p class="wid">PHP</p>
+                <p class="wid" php>PHP</p>
                 <div class="ptlt"><p>50%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">MySQL</p>
-                <div class="ptlt"><p>85%</p></div>
+                <div class="ptlt mysql"><p>85%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">SQL</p>
-                <div class="ptlt"><p>85%</p></div>
+                <div class="ptlt sql"><p>85%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">MongoDB</p>
-                <div class="ptlt"><p>85%</p></div>
+                <div class="ptlt mongodb"><p>85%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">PosgreSQL</p>
-                <div class="ptlt"><p>75%</p></div>
+                <div class="ptlt PosgreSQL"><p>75%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">Oracle</p>
-                <div class="ptlt"><p>80%</p></div>
+                <div class="ptlt oracle"><p>80%</p></div>
             </div>
             <div class="pt reveal">
                 <p class="wid">Github</p>
-                <div class="ptlt"><p>80%</p></div>
+                <div class="ptlt git"><p>80%</p></div>
             </div>
         </div>
     </div>
-    <div class="container4">
+    <div id="about" class="container4">
         <div class="back4"></div>
         <p class="about">About</p>
         <div class="about-text bbb">
@@ -127,10 +134,10 @@
                     I will love to hear from you. whether it's a project, job opportunity ,or just chat. Fell free to contact me.
                 </p>
         </div>
-        <form class="bbb">
-            <input type="text" placeholder="Name *" required>
-            <input type="email" name="Email" id="Email" placeholder="Email *" required>
-            <textarea type="text" class="textc" placeholder="Massage"></textarea>
+        <form action="https://formsubmit.co/raeinking2@gmail.com" method="POST" class="bbb content">
+            <input class="name" type="text" placeholder="Name *" required>
+            <input class="email" type="email" name="Email" id="Email" placeholder="Email *" required>
+            <textarea class="msg" type="text" class="textc" placeholder="Massage"></textarea>
             <input type="submit" value="Send Massage">
         </form>
     </div>
@@ -138,9 +145,9 @@
         <div class="footer-left">
             <div class="footer-name">Ramo</div>
             <ul class="ul">
-                <li class="li">Project</li>
-                <li class="li">Skills</li> 
-                <li class="li">About</li>
+                <a href="#project"><li class="li">Project</li></a>
+                <a href="#skill"><li class="li">Skills</li></a> 
+                <a href="#about"><li class="li">About</li></a>
             </ul>
         </div>
         <div class="icons-right">
@@ -156,5 +163,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

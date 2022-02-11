@@ -34,6 +34,7 @@ const tl = gsap.timeline()
 tl.from('.text1',1 , {y: 100 , opacity: 0 })
 tl.from('.nav-left',1 , {y: -50 , opacity: 0} ,'-=1')
 tl.from('ul',1 , {y: -50 , opacity: 0} ,'-=1')
+tl.from('.humberger',1 , {y: -50 , opacity: 0} ,'-=1')
 
 var typed = new Typed('.typing', {
     strings: [
@@ -41,8 +42,26 @@ var typed = new Typed('.typing', {
          "FullStack Developer",
          "FrontEnd  Developer",
          "BackEnd  Developer",
+         "Freelancer",
         ],
     typeSpeed: 80,
     backSpeed: 80,
     loop: true
 });
+
+const humberger = document.querySelector('.humberger')
+const mobile = document.querySelector('.mobile-menu')
+const close = document.querySelector('.close')
+
+humberger.addEventListener("click", ()=> {
+    mobile.style.transform =`translateX(-300px)`
+})
+close.addEventListener("click", ()=> {
+    mobile.style.transform =`translateX(0px)`
+})
+
+const content = document.querySelector('.content')
+const name = document.querySelector('.name')
+const email = document.querySelector('.email')
+const msg = document.querySelector('.msg')
+

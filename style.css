@@ -4,6 +4,63 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+.mobile-menu {
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    right: -300px;
+    display: none;
+    flex-direction: column;
+    transition: 250ms all cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.mobile-menu img {
+    margin: 0.3rem 1.5rem;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+.mobile-menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+
+}
+.mobile-menu ul li{
+    color: black(255, 255, 255);
+    list-style: none;
+    padding: 0.8rem 2rem ;
+    border: 1px solid black;
+    transition: 250ms all cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.mobile-menu ul li:hover{
+    color: white;
+    list-style: none;
+    padding: 0.8rem 2rem ;
+    border: 1px solid black;
+    background-color:black;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+
+
+
+
 nav {
     position: fixed;
     width: 100%;
@@ -36,10 +93,14 @@ nav ul li {
 .humberger {
     display: none;
     flex-direction: column;
-    width: 20px;
-    height: 35px;
+    width: 27px;
+    height: 40px;
     justify-content: space-evenly;
     margin-right: 2rem;
+}
+.humberger img{
+    height: 30px;
+    width: 30px;
 }
 .first,.second,.therd{
     width: 100%;
@@ -206,7 +267,7 @@ nav ul li {
     margin: 0 0 0 105%;
     overflow: visible;
     z-index: 3;
-    background-color: white
+    background-color: white;
 }
 .container4 {
     background-image: url('./image/cccc.jpg');
@@ -292,16 +353,6 @@ textarea {
     width: 80%;
     height: 150px;
 }
-
-
-
-
-
-
-
-
-
-
 footer {
     width: 100%;
     display: flex;
@@ -313,8 +364,6 @@ footer {
     position: relative;
 }
 .icons-right {
-    /* position: absolute;
-    bottom: 10px; */
     display: grid;
     grid-template-columns: repeat(2, 40px);
     grid-template-rows:  1fr 1fr;
@@ -336,7 +385,6 @@ img {
     cursor: pointer;
 }
 .li {
-    /* margin-right: 3rem; */
     list-style: none;
     cursor: pointer;
     color: white;
@@ -361,35 +409,17 @@ img {
     transform: translateX(0);
     opacity: 1;
 }
-
-
-
-
-
-
 .reveal{
     position: relative;
     transform: translateY(200px);
     opacity: 0;
     transition: 1.5s all ease;
-  }
+}
   
-  .reveal.active{
+.reveal.active{
     transform: translateY(0);
     opacity: 1;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+}
 @media only screen and (max-width: 1400px) {
     .text1 {
         left: 60px;
@@ -417,6 +447,9 @@ img {
   }
 
   @media only screen and (max-width: 600px) {
+    .mobile-menu {
+        display: flex;
+    }
       .container1 {
           background-position: -800px;
       }
@@ -451,4 +484,7 @@ img {
 
 
 
-
+/* 
+.block{
+    display: none;
+} */
