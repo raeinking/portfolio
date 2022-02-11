@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
 .mobile-menu {
     position: absolute;
     z-index: 10;
@@ -49,18 +48,10 @@
     border: 1px solid black;
     background-color:black;
 }
-
-
-
 a {
     text-decoration: none;
     color: black
 }
-
-
-
-
-
 nav {
     position: fixed;
     width: 100%;
@@ -250,24 +241,134 @@ nav ul li {
     display: flex;
     justify-content:space-around;
     align-items: center;
+    position: relative;
 }
 .wid {
     width:100px;
 }
 .ptlt {
     position: relative;
-    border: 1px solid white;
     width: 80%; 
     justify-content: center;
     border-radius:2px;
     padding: 2px 0;
     overflow: visible;
 }
-.ptlt p {
-    margin: 0 0 0 105%;
-    overflow: visible;
-    z-index: 3;
-    background-color: white;
+.bar {
+    width: 100%;
+    background-color: rgb(10, 95, 95);
+    border-radius: 25px;    
+    height: 19px;
+}
+.bar:after {
+    content: "";
+    position: absolute;
+    top: calc(0 );
+    left: 0;
+    width: 0%;
+    height: 15px;
+    background-color: aqua;
+    border-radius: 25px;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+.bar.html::after {
+    animation-name: html;
+}
+.bar.css::after {
+    animation-name: css;
+}
+.bar.js::after {
+    animation-name: js;
+}
+.bar.rect::after {
+    animation-name: rect;
+}
+.bar.jq::after {
+    animation-name: jq;
+}
+.bar.php::after {
+    animation-name: php;
+}
+.bar.mysql::after {
+    animation-name: mysql;
+}
+.bar.sql::after {
+    animation-name: sql;
+}
+.bar.mongodb::after {
+    animation-name: mongodb;
+}
+.bar.PosgreSQL::after {
+    animation-name: PosgreSQL;
+}
+.bar.oracle::after {
+    animation-name: oracle;
+}
+.bar.git::after {
+    animation-name: git;
+}
+
+@keyframes html {
+    to{
+        width: 95%;
+    }
+}
+@keyframes css {
+    to{
+        width: 90%;
+    }
+}
+@keyframes js {
+    to{
+        width: 85%;
+    }
+}
+@keyframes rect {
+    to{
+        width: 80%;
+    }
+}
+@keyframes jq {
+    to{
+        width: 75%;
+    }
+}
+@keyframes php {
+    to{
+        width: 50%;
+    }
+}
+@keyframes mysql {
+    to{
+        width: 80%;
+    }
+}
+@keyframes sql {
+    to{
+        width: 80%;
+    }
+}
+@keyframes mongodb {
+    to{
+        width: 70%;
+    }
+}
+@keyframes PosgreSQL {
+    to{
+        width: 70%;
+    }
+}
+@keyframes oracle {
+    to{
+        width: 65%;
+    }
+}
+@keyframes git {
+    to{
+        width: 85%;
+    }
 }
 .container4 {
     background-image: url('./image/cccc.jpg');
@@ -479,12 +580,3 @@ img {
         margin-top: 1rem;
       }
   }
-
-
-
-
-
-/* 
-.block{
-    display: none;
-} */
