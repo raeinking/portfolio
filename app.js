@@ -38,7 +38,7 @@ tl.from('.humberger',1 , {y: -50 , opacity: 0} ,'-=1')
 
 var typed = new Typed('.typing', {
     strings: [
-        "Yotuber",
+        "Youtube",
          "FullStack Developer",
          "FrontEnd  Developer",
          "BackEnd  Developer",
@@ -60,8 +60,7 @@ close.addEventListener("click", ()=> {
     mobile.style.transform =`translateX(0px)`
 })
 
-const content = document.querySelector('.content')
-const name = document.querySelector('.name')
-const email = document.querySelector('.email')
-const msg = document.querySelector('.msg')
-
+let send = document.querySelector('.send')
+send.addEventListener("click", () => {
+  alert('thank you for send and wait for replay')
+})
