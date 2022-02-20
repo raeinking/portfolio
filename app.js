@@ -38,7 +38,7 @@ tl.from('.humberger',1 , {y: -50 , opacity: 0} ,'-=1')
 
 var typed = new Typed('.typing', {
     strings: [
-        "Youtube",
+        "Youtuber",
          "FullStack Developer",
          "FrontEnd  Developer",
          "BackEnd  Developer",
