@@ -282,6 +282,9 @@ nav ul li {
 .bar.js::after {
     animation-name: js;
 }
+.bar.node::after {
+    animation-name: node;
+}
 .bar.rect::after {
     animation-name: rect;
 }
@@ -323,6 +326,11 @@ nav ul li {
 @keyframes js {
     to{
         width: 85%;
+    }
+}
+@keyframes node {
+    to{
+        width: 80%;
     }
 }
 @keyframes rect {
